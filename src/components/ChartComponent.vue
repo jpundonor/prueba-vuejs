@@ -4,7 +4,7 @@
     <canvas class="max-w-full max-h-full" ref="chartCanvas"></canvas>
   </div>
   <div class="flex items-center mt-10 gap-10">
-    <div v-vk-margin class="grid grid-cols-6 w-5/12 rounded overflow-hidden">
+    <div v-vk-margin class="grid grid-cols-6 w-full md:w-5/12 rounded overflow-hidden">
       <vk-button
         v-for="period in periods"
         :key="period"
@@ -175,6 +175,9 @@ export default {
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          animation: {
+            duration: 0,
+          },
           scales: {
             x: {
               ticks: {

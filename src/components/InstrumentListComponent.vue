@@ -1,6 +1,6 @@
 <!-- Lista de instrumentos (acciones) con su información clave. -->
 <template>
-  <table class="w-1/2">
+  <table class="md:w-1/2">
     <thead>
       <tr class="border-b-2 border-t-1 border-gray-500">
         <th
@@ -10,6 +10,8 @@
           :class="[
             'cursor-pointer py-4 hover:-translate-y-1 transition-all duration-300',
             key === 'shortName' ? 'text-left w-1/4' : 'text-right',
+            header === 'Monto (MM)' ? 'hidden md:block' : '',
+            header === '12 Meses' ? 'hidden md:block' : '',
           ]"
         >
           {{ header }}

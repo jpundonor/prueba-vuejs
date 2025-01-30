@@ -57,18 +57,6 @@ export const useInstrumentStore = defineStore("instrument", {
         return (
           entryDate >= start && entryDate <= end
         );
-        // console.log("dateString", dateString);
-        // console.log("start", start);
-        // console.log("end", end);
-        // return (
-        //   dateString >= start && dateString <= end
-        // );
-        // const entryDate = new Date(dateString.split("-").reverse().join("-"));
-        // console.log("entryDate", entryDate);
-        // // console.log("endDate", new Date(endDate));
-        // return (
-        //   entryDate >= new Date(startDate) && entryDate <= new Date(endDate)
-        // );
       });
     },
 

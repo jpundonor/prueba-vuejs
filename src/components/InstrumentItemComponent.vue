@@ -4,7 +4,7 @@
   <tr class="cursor-pointer hover:bg-zinc-900" @click="selectInstrument(instrument?.shortName)">
     <td class="text-left font-semibold">{{ instrument?.shortName }}</td>
     <td class="text-right">{{ instrument?.lastPrice.toFixed(2) }}</td>
-    <td class="text-right">{{ (montoMM / 1000000).toFixed(2) }}</td>
+    <td class="text-right hidden md:block">{{ (montoMM / 1000000).toFixed(2) }}</td>
     <td
       :class="[
         'text-right',
@@ -46,7 +46,7 @@
     </td>
     <td
       :class="[
-        'text-right',
+        'text-right md:block hidden',
         instrument?.pct1Y > 0 ? 'text-green-500' : '',
         instrument?.pct1Y < 0 ? 'text-red-500' : '',
       ]"

@@ -1,14 +1,16 @@
 <!-- Permite cambiar entre diferentes índices (IPSA, IGPA, NASDAQ, etc.). -->
-
 <template>
-  <div class="shadow-md">
-    <p class="text-2xl">TabComponent</p>
+  <div class="border-b-1 border-gray-500">
     <vk-tabs @click="handleTabClick">
-      <vk-tabs-item title>IPSA</vk-tabs-item>
-      <vk-tabs-item title>IGPA</vk-tabs-item>
-      <vk-tabs-item title>NASDAQ</vk-tabs-item>
-      <vk-tabs-item title>DOW JONES</vk-tabs-item>
-      <vk-tabs-item title>SP/BVL</vk-tabs-item>
+      <vk-tabs-item
+      v-if="tabs"
+        v-for="(tab, index) in tabs"
+        :key="index"
+        :class="activeTab === index ? 'border-b-3 border-blue-600' : ''"
+        @click="setActiveTab(index)"
+      >
+        {{ tab }}
+      </vk-tabs-item>
     </vk-tabs>
   </div>
 </template>
@@ -19,11 +21,25 @@ export default {
     vkTabs: "vk-tabs",
     vkTabsItem: "vk-tabs-item",
   },
+  props:{
+    tabs: Array,
+  },
+  data() {
+    return {
+      activeTab: 0,
+    };
+  },
+  computed: {
+  },
   methods: {
     handleTabClick(index) {
       console.log("Tab clicked", index.target.firstChild.data);
     },
+    setActiveTab(index) {
+      this.activeTab = index;
+    },
   },
+
 };
 </script>
 
@@ -33,7 +49,6 @@ vk-tabs {
   @apply flex;
 }
 vk-tabs-item {
-  @apply cursor-pointer p-4 text-center;
-  @apply hover:bg-gray-300;
+  @apply cursor-pointer p-4 text-center flex-1;
 }
 </style>

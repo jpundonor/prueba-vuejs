@@ -6,6 +6,8 @@ import Vuikit from "vuikit";
 import VuikitIcons from "@vuikit/icons";
 
 import "@vuikit/theme";
+import "@vuikit/icons";
+
 
 const app = createApp(App);
 const pinia = createPinia();

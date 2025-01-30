@@ -55,7 +55,7 @@ Accede a la versión desplegada:
 
 ## ✅ Pruebas Automatizadas
 
-![Captura del Dashboard](screenshots/dashboard.png) 
+![Captura del Dashboard](screenshots/tests.png) 
 
 
 ## 🏗 Estructura de Proyecto

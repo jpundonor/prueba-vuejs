@@ -5,7 +5,7 @@
 [![Tests](https://img.shields.io/badge/Pruebas-Jest%20%7C%20Vue%20Test%20Utils-brightgreen)](https://jestjs.io/)
 
 Aplicación web para visualizar datos financieros en tiempo real, desarrollada con Vue.js. 
-Incluye gráficos interactivos, gestión de estado con Pinia y pruebas unitarias/integración.
+Incluye gráficos interactivos, gestión de estado con Pinia y pruebas unitarias.
 
 ![Captura del Dashboard](screenshots/dashboard.png) 
 
@@ -21,7 +21,7 @@ Incluye gráficos interactivos, gestión de estado con Pinia y pruebas unitarias
 |------------|-----|
 | Vue.js 3 | Framework principal |
 | Pinia | Gestión de estado global |
-| Tailwind CSS | Estilos y diseño |
+| Tailwind CSS | Estilos y diseño responsive |
 | Chart.js | Visualización de gráficos |
 | Jest | Pruebas unitarias |
 | Vue Test Utils | Pruebas de componentes |
